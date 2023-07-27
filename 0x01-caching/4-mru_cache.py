@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""LRU Caching"""
+"""MRU Caching"""
 from base_caching import BaseCaching
 
 
-class LRUCache(BaseCaching):
+class MRUCache(BaseCaching):
     """inherits from BaseCaching"""
 
     def __init__(self):
@@ -19,9 +19,9 @@ class LRUCache(BaseCaching):
             length = len(self.cache_data)
 
             if length >= BaseCaching.MAX_ITEMS and key not in self.cache_data:
-                print("DISCARD: {}".format(self.usage[0]))
-                del self.cache_data[self.usage[0]]
-                del self.usage[0]
+                print("DISCARD: {}".format(self.usage[-1]))
+                del self.cache_data[self.usage[-1]]
+                del self.usage[-1]
 
             if key in self.usage:
                 del self.usage[self.usage.index(key)]
