@@ -22,7 +22,7 @@ class FIFOCache(BaseCaching):
                 print("DISCARD: {}".format(self.order[0]))
                 del self.cache_data[self.order[0]]
                 del self.order[0]
-                
+
             self.order.append(key)
             self.cache_data[key] = item
 
