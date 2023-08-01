@@ -26,3 +26,6 @@ msgstr ""
 msgid "home_header"
 msgstr ""
 
+#: templates/index.html:14
+msgid "current_time_is"
+msgstr "The current time is %(current_time)s."
